@@ -1,0 +1,60 @@
+if screenClass ? screenClass : screenClass = []
+
+//begin screen
++b.SECTION.screen(class= screenClass ? screenClass : '')
+	+e.pic(style="background-image: url(img/bg/screen-pic.jpg)")
+	+e.container.container
+		+e.slider.js-screen-slider
+			+e.slider-item
+				+e.text
+					+e.H2.title ГАРАНТИРОВАННОЕ РЕШЕНИЕ ЛЮБОГО ЮРИДИЧЕСКОГО ВОПРОСА
+					+e.P.descr Оставьте заявку и получите консультацию профессионального юриста
+						= ' '
+						+e.STRONG БЕСПЛАТНО
+
+				+b.advice._screen
+					+e.FORM(action='#!')
+						+e.form-inn
+							+e.form-field
+								+e.INPUT.input.input(type='text' placeholder='Имя*' name='')
+							+e.form-field
+								+e.INPUT.input.input(type='tel' placeholder='Телефон*' name='')
+							+e.form-field
+								+e.BUTTON(type='submit').btn.btn Получить консультацию
+
+			+e.slider-item
+				+e.text
+					+e.H2.title ГАРАНТИРОВАННОЕ РЕШЕНИЕ ЛЮБОГО ЮРИДИЧЕСКОГО ВОПРОСА
+					+e.P.descr Оставьте заявку и получите консультацию профессионального юриста
+						= ' '
+						+e.STRONG БЕСПЛАТНО
+
+				+b.advice._screen
+					+e.FORM(action='#!')
+						+e.form-inn
+							+e.form-field
+								+e.INPUT.input.input(type='text' placeholder='Имя*' name='')
+							+e.form-field
+								+e.INPUT.input.input(type='tel' placeholder='Телефон*' name='')
+							+e.form-field
+								+e.BUTTON(type='submit').btn.btn Получить консультацию
+
+		+e.adv
+			+e.adv-item
+				+e.adv-inn._mod
+					+e.SPAN.adv-count 10
+					= ' '
+					+e.SPAN.adv-text._lg лет на рынке
+			+e.adv-item
+				+e.adv-inn
+					+e.P.adv-text._lg более
+					+e.adv-count 1000
+					+e.P.adv-text довольных клиентов
+			+e.adv-item
+				+e.adv-inn
+					+e.P.adv-text._lg более
+					+e.adv-count 100
+					+e.P.adv-text услуг для физ. и юр. лиц
+	+e.icon
+
+	// end screen

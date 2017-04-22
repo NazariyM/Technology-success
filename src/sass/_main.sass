@@ -7,7 +7,7 @@
 		align-items: center
 		padding: 20px 15px 23px
 		+r(1439)
-			padding: 5px 15px
+			padding: 10px 15px
 		+sm
 			padding: 15px 10px 15px
 		+xs
@@ -172,6 +172,7 @@
 	&__container
 		display: flex
 		justify-content: space-between
+		align-items: center
 		+sm
 			margin: 0 -5px
 		+xs
@@ -182,7 +183,7 @@
 			padding: 0
 			text-align: center
 	&__item
-		margin-left: 10px
+		margin-left: 20px
 		+sm
 			margin-left: 0
 		+xs
@@ -206,7 +207,6 @@
 			box-shadow: 0 1px 0 $accent
 	&__link
 		display: block
-		padding: 2px 0
 		color: #303030
 		transition: box-shadow .25s, color .25s
 		+sm
@@ -232,6 +232,8 @@
 		&_home
 			display: block
 			+s('home')
+			&:hover
+				box-shadow: none
 			+xs
 				background: none
 				width: auto
@@ -240,222 +242,6 @@
 				display: none
 				+xs
 					display: inline
-					
-/* screen
-	----------------------------------- */
-.screen
-	display: flex
-	flex-direction: column
-	align-items: center
-	justify-content: center
-	position: relative
-	border-top: 1px solid rgba(#5facae, .3)
-	height: calc(100vh - 190px)
-	min-height: 500px
-	+r(1439)
-		height: calc(100vh - 147px)
-	+md
-		height: auto
-		min-height: 600px
-	+xs
-		justify-content: flex-start
-	&__container
-		display: flex
-		flex-direction: column
-		justify-content: center
-		position: relative
-		max-width: 1158px
-		min-height: 450px
-		margin: -15px 0 0
-		width: 100%
-		z-index: 1
-		+md
-			max-width: 920px
-		+xs
-			margin: 0
-			padding: 15px 0 40px
-	&__pic
-		+coverdiv
-		+cover
-		z-index: 0
-		+md
-			background-size: 145% 100%
-			background-position: 49% 50%
-		+sm
-			background-size: 226% 100%
-			background-position: 17% 50%
-		+xs
-			background-size: cover
-			background-position: 20% 50%
-	&__slider
-		width: 100%
-		padding: 0 30px
-		display: none
-		+sm
-			max-width: 800px
-			margin: 0 auto
-		+xs
-			padding: 0
-		&.slick-initialized
-			display: block
-		.screen__arrow-next.slick-disabled,
-		.screen__arrow-prev.slick-disabled
-			+md
-			    fill: rgba($accent, .8)
-			+md
-			    fill: rgba(#fff, .3)
-		.screen__arrow-next,
-		.screen__arrow-prev
-			+sm
-				 	fill: darken($accent, 5)
-		.screen__arrow-prev
-			+xs
-				left: -7px
-		.screen__arrow-next
-			+xs
-				right: -7px
-		.slick-arrow
-			+xs
-				top: 88px
-				fill: #fff
-			+r(374)
-				top: 34.5%
-	
-	&__arrow
-		transition: fill .25s
-		background-color: transparent
-		fill: rgba($accent, .6)
-		position: absolute
-		top: calc(50% - 23px)
-		z-index: 2
-		&.slick-disabled
-			fill: rgba(#fff, .6)
-			&:hover
-				fill: rgba(#fff, .6)
-		&:hover
-			fill: $accent
-		.arrow-icon
-			width: 42px
-			height: 45px
-		&-prev
-			left: 0
-		&-next
-			right: 0
-			.arrow-icon
-				+rotate(180)
-	&__text
-		text-align: center
-		margin: 0 auto
-	&__descr
-		+sm
-			max-width: 600px
-			margin: 0 auto
-			padding: 10px 30px
-			background-color: rgba($accent, .9)
-			color: #fff
-			+f('ub-r')
-			border-radius: 10px
-			
-	&__title
-		max-width: 600px
-		margin: 0 auto 15px
-		font-weight: 300
-		font-size: 32px
-		+sm
-			font-size: 28px
-		+xs
-			padding: 0 10px
-			font-size: 20px
-			color: #000
-	&__form-wrap
-		margin: 55px 0 75px
-		+r(1439)
-			margin: 30px 0 45px
-		+sm
-			margin: 30px 0 0
-		+xs
-			margin: 20px 0 0
-	&__form-inn
-		display: flex
-		justify-content: center
-		align-items: center
-		+sm
-			flex-direction: column
-			align-items: stretch
-			padding: 0 100px
-		+xs
-			padding: 0 20px
-	&__form-field
-		flex-basis: (202/1068 * 100%)
-		+md
-			flex-basis: 25%
-		+sm
-			margin-bottom: 10px
-		& + &
-			margin-left: 15px
-			+sm
-				margin-left: 0
-	&__btn
-		min-width: 256px
-		height: 45px
-		line-height: 45px
-		+sm
-			width: 100%
-	&__adv
-		display: flex
-		justify-content: center
-		+md
-			margin: 20px 0 0
-		+xs
-			margin-top: 10px
-			justify-content: space-between
-		&-item
-			display: flex
-			align-items: center
-			justify-content: center
-			overflow: hidden
-			width: 118px
-			height: 118px
-			border-radius: 50%
-			border: 3px solid #ffffff
-			color: #fff
-			text-align: center
-			& + &
-				margin-left: 40px
-				+xs
-					margin-left: 0
-		&-inn
-			padding: 10px
-			height: 108px
-			width: 108px
-			border-radius: 50%
-			background-color: $accent
-			&_mod
-				padding-top: 30px
-				line-height: 1.1
-		&-count
-			+f('bn-r',39)
-			line-height: 30px
-		&-text
-			font-size: 12px
-		&-text_lg
-			font-size: 15px
-	&__icon
-		position: absolute
-		z-index: 1
-		border-radius: 50%
-		left: calc(50% - 14px)
-		bottom: 17px
-		width: 28px
-		height: 28px
-		background-color: #fff
-		+xs
-			bottom: 6px
-		&::after
-			+vcenter
-			content: ''
-			border-radius: 50%
-			+s('scroll')
 			
 /* services
 	----------------------------------- */
@@ -981,7 +767,7 @@
 				align-items: center
 	
 
-/* other styles
+/* section icons
 	----------------------------------- */
 .section-icon
 	position: relative
@@ -1022,4 +808,44 @@
 			+s('university')
 		&_location::after
 			+s('location')
+		&_handshake::after
+			top: 54%
+			+s('handshake')
 			
+/* .dispute
+	----------------------------------- */
+.dispute
+	padding: 25px 0 40px
+	background: #FBF8F5
+	&__in
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-top: 20px
+	&__item
+		overflow: hidden
+		padding: 30px 33px 25px
+		margin-bottom: 20px
+		width: percentage(338 / 1170)
+		border-radius: 10px
+		font-size: 14px
+		color: #000
+		background: #F3E9E0 url('../img/bg/dispute-itm_bg.png') no-repeat bottom right
+		text-align: center
+	&__item-title
+		font-size: 18px
+		+f('tnr-r')
+	&__item-descr
+		margin: 20px 0 30px
+	&__item-condition
+		padding: 0 43px
+		margin-bottom: 30px
+		text-align: left
+
+/* .escort
+	----------------------------------- */
+.escort
+	&__in
+		+clr
+	&__pic
+		float: right

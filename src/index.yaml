@@ -1,5 +1,8 @@
 ProjectTitle: template
 
 PageList:
-- file: page.html
-  ready: 10%
+- file: home-page.html
+  ready: 100%
+
+- file: internal-page.html
+  ready: 35%

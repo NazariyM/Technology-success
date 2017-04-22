@@ -1,0 +1,229 @@
+---
+title: Технологии успеха
+---
+extends layouts/_layout
+
+block content
+	//begin screen
+	+b.SECTION.screen(class= screenClass ? screenClass : '')
+		+e.pic._double-bg(style="background-image: url(img/bg/screen-pic_2.jpg), url(img/bg/screen-pic_3.jpg)")
+		+e.container.container
+				+e.text
+					+e.H2.title._margin ЮРИДИЧЕСКОЕ СОПРОВОЖДЕНИЕ СДЕЛОК С НЕДВИЖИМОСТЬЮ
+					+e.P.descr Оставьте заявку и получите консультацию профессионального юриста
+						= ' '
+						+e.STRONG БЕСПЛАТНО
+				+b.advice._screen
+					+e.FORM(action='#!').form
+						+e.form-inn
+							+e.form-field
+								+e.INPUT.input.input(type='text' placeholder='Имя*' name='')
+							+e.form-field
+								+e.INPUT.input.input(type='tel' placeholder='Телефон*' name='')
+							+e.form-field
+								+e.BUTTON(type='submit').btn.btn Получить консультацию
+
+		+e.icon
+
+	// end screen
+
+	//begin dispute
+	-
+		var disputeList = [
+		{
+		title: 'Признание права собственности по давности владения'
+		},
+		{
+		title: 'Признание права собственности отсутствующим'
+		},
+		{
+		title: 'Получение разрешения на строительство частного дома'
+		},
+		{
+		title: 'Истребование имущества из ужого незаконного владения'
+		}
+		,{
+		title: 'Самовольные постройки'
+		}
+		,{
+		title: 'Устранение препятствий в пользовании имуществом'
+		}
+		];
+	mixin disputeItem(item)
+		+e.item
+			+e.item-title= item.title
+			+e.P.item-descr Одним из способов приобретения права собственности является признание права собственности на имущество по давности владения.
+			+e.item-condition
+				+e.P
+					+e.STRONG Срок
+					=' '
+					+e.SPAN 2 месяца
+				+e.P
+					+e.STRONG Стоимость
+					=' '
+					+e.SPAN 22 000 рублей
+			+e.item-btn.btn Заказать
+
+	+b.SECTION.dispute
+		+b.section-icon
+			+e.pic._handshake
+		+e.container.container
+			+b.H2.title-md Споры о праве собственности:
+			+e.in
+				each item in disputeList
+					+disputeItem(item)
+	//end dispute
+
+	//begin escort
+	+b.SECTION.escort
+		+b.section-icon
+			+e.pic._university
+		+e.container.container
+			+b.H2.title-md Юридическое сопровождение сделок с недвижимостью
+			+e.in
+				+e.pic
+					+e.IMG(src='img/content/escort_img.jpg')
+				+e.text
+					+e.P Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra.
+				+e.P Pellentesquearcu mauris, malesuada quis ornare accumsan, blandit sed diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus.
+				+e.P
+				+e.BUTTON(type='button').js-more-text Развернуть весь текст
+
+	//end
+
+	//begin feed
+	+b.SECTION.feed
+		+b.section-icon
+			+e.pic._feed
+		+e.container.container
+			+b.H2.title-md Отзывы о нашей работе
+			+e.slider.js-feed-slider.js-img-preview
+				+e.A(href='img/content/feed_img-1.jpg' data-fancybox="feed").pic
+					+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+					+e.DIV.controls
+						+icon('icon-zoom')
+				+e.A(href='img/content/feed_img-2.jpg' data-fancybox="feed").pic
+					+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+					+e.DIV.controls
+						+icon('icon-zoom')
+				+e.A(href='img/content/feed_img-1.jpg' data-fancybox="feed").pic
+					+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+					+e.DIV.controls
+						+icon('icon-zoom')
+				+e.A(href='img/content/feed_img-2.jpg' data-fancybox="feed").pic
+					+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+					+e.DIV.controls
+						+icon('icon-zoom')
+				+e.A(href='img/content/feed_img-1.jpg' data-fancybox="feed").pic
+					+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+					+e.DIV.controls
+						+icon('icon-zoom')
+				+e.A(href='img/content/feed_img-2.jpg' data-fancybox="feed").pic
+					+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+					+e.DIV.controls
+						+icon('icon-zoom')
+				+e.A(href='img/content/feed_img-2.jpg' data-fancybox="feed").pic
+					+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+					+e.DIV.controls
+						+icon('icon-zoom')
+				+e.A(href='img/content/feed_img-2.jpg' data-fancybox="feed").pic
+					+e.IMG(src='img/content/feed_thumbnail.jpg' alt='img').img
+					+e.DIV.controls
+						+icon('icon-zoom')
+
+			+b.clients
+				+b.section-icon
+					+e.pic._star
+				+e.H2.title.title-md Наши клиенты и партнеры
+
+				+e.slider.js-clients-slider
+					+e.item
+						+e.pic
+							+e.IMG(src='img/content/client-1.png').img
+					+e.item
+						+e.pic
+							+e.IMG(src='img/content/client-2.png').img
+					+e.item
+						+e.pic
+							+e.IMG(src='img/content/client-3.png').img
+					+e.item
+						+e.pic
+							+e.IMG(src='img/content/client-4.png').img
+					+e.item
+						+e.pic
+							+e.IMG(src='img/content/client-5.png').img
+					+e.item
+						+e.pic
+							+e.IMG(src='img/content/client-2.png').img
+					+e.item
+						+e.pic
+							+e.IMG(src='img/content/client-3.png').img
+					+e.item
+						+e.pic
+							+e.IMG(src='img/content/client-4.png').img
+	//end feed
+
+	//begin about company
+	+b.SECTION.about-company
+		+e.background(style='background-image: url(img/bg/about_bg.jpg)')
+		+b.section-icon
+			+e.pic._hammer
+		+e.container.container
+			+b.H2.title-md Немного о нашей компании
+			+e.descr
+				+e.P.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit.
+				+e.P.text Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris
+				+e.A(href='#!').btn.btn Обратиться к нам
+
+		+b.SECTION.specials
+			+e.container.container
+				+b.H2.title-md.title-decor
+					+e.SPAN Наши специалисты
+				+e.slider.js-special-slider
+					+e.item
+						+e.photo
+							+e.IMG(src='img/content/specialist.jpg')
+						+e.data
+							+e.name Константин Константинович Констонтинопольский
+							+e.position Юрист
+							+e.UL.merit
+								+e.LI.merit-item Имеет 2 высших образования по направлениям: юриспруденция и финансы и кредит.
+								+e.LI.merit-item Специалист в области защиты прав потребителей.
+								+e.LI.merit-item Опыт работы более 10 лет.
+					+e.item
+						+e.photo
+							+e.IMG(src='img/content/specialist.jpg')
+						+e.data
+							+e.name Константин Константинович Констонтинопольский
+							+e.position Юрист
+							+e.UL.merit
+								+e.LI.merit-item Имеет 2 высших образования по направлениям: юриспруденция и финансы и кредит.
+								+e.LI.merit-item Специалист в области защиты прав потребителей.
+								+e.LI.merit-item Опыт работы более 10 лет.
+
+	//end about company
+
+	//begin story
+	+b.SECTION.story
+		+b.section-icon
+			+e.pic._university
+		+e.container.container
+			+b.H2.title-md Юридические услуги в Самаре
+			+e.inn
+				+e.col
+					+e.IMG(src='img/content/story_img.jpg').img
+				+e.col
+					+e.P.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra.
+					+e.P.text Pellentesquearcu mauris, malesuada quis ornare accumsan, blandit sed diam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui.
+	//end story
+
+	//begin location
+	+b.last-screen.section
+		+b.SECTION.location
+			+e.label
+				+b.section-icon
+					+e.pic._location
+				+e.title.title-md МЫ РАСПОЛОЖЕНЫ:
+			+e.map-wrap
+				+e.map#js-home-map
+	//end location

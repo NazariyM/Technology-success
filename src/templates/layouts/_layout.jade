@@ -8,13 +8,17 @@ html
     include ../bemto/bemto
     //begin out
     .out(class=outClass)
+      block header
+        include ../partials/_header
 
-        block content
+      block content
 
+      block footer
+        include ../partials/_footer
     //end out
 
     //load scripts
     block scripts
       script(type="text/javascript" src="js/app.js")
       script(type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
-      //script(type="text/javascript" src="js/ymap-controls-theme.js")
+      //if disableMap !== true
