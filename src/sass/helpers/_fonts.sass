@@ -1,4 +1,5 @@
 +font("Bebas Neue Regular", BebasNeueRegular)
++font("Myriad Pro Bold", MyriadPro-Bold)
 +font("Myriad Pro Regular", MyriadPro-Regular)
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&subset=cyrillic')
 
@@ -21,6 +22,10 @@
 	@if $name == "tnr-b"
 		$font-family: "Times New Roman"
 		$font-weight: 700
+	@if $name == "mrp-r"
+		$font-family: "Myriad Pro Regular"
+	@if $name == "mrp-b"
+		$font-family: "Myriad Pro Bold"
 	font-family: $font-family, Arial, sans-serif
 	@if $font-family != null
 	@if $font-size != null

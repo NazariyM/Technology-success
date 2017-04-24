@@ -1,0 +1,54 @@
+.dispute
+	padding: 25px 0 20px
+	background: #FBF8F5
+	&__in
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-top: 20px
+	&__item
+		position: relative
+		z-index: 1
+		min-height: 365px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		overflow: hidden
+		padding: 30px 33px 25px
+		margin-bottom: 20px
+		width: percentage(338 / 1170)
+		border-radius: 10px
+		font-size: 14px
+		color: #000
+		text-align: center
+		background-color: #f2e8df
+		+md
+			flex-basis: 31.6%
+		+sm
+			flex-basis: 48.5%
+		+xs
+			min-height: 0
+			padding: 20px 10px 20px
+			flex-basis: 100%
+		&::after
+			content: ''
+			+coverdiv
+			background: url('../img/bg/dispute-item_bg.png') no-repeat bottom right
+			background-size: cover
+			opacity: .25
+			z-index: -1
+	&__item-title
+		font-size: 18px
+		+f('tnr-r')
+	&__item-descr
+		margin: 20px 0 30px
+		+sm
+			margin: 20px 0 15px
+	&__item-condition
+		padding: 0 43px
+		margin-bottom: 30px
+		text-align: left
+		+md
+			padding:  0 15px
+		+sm
+			margin-bottom: 20px

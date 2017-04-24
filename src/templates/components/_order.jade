@@ -1,0 +1,41 @@
+if orderClass ? orderClass : orderClass = []
+
+//begin order
++b.SECTION.order(class= orderClass ? orderClass : '')
+	+e.container.container
+		+b.title-md.title-decor
+			+e.SPAN Порядок указания услуг
+		+e.in
+			+e.item
+				+e.item-pic._1
+					+e.item-count 1
+				+e.item-descr Заполните
+					= ' '
+					+b.A(href='#!').link форму на сайте
+					= ' '
+					| или позвоните нам
+					= ' '
+					+e.A(href='tel:8461234567').item-tel +7 (846) 123-45-67
+			+e.item
+				+e.item-pic._2
+					+e.item-count 2
+				+e.item-descr Осуществляем сбор необходимых документов
+			+e.item
+				+e.item-pic._3
+					+e.item-count 3
+				+e.item-descr Составляем договор купли-продажи
+			+e.item
+				+e.item-pic._4
+					+e.item-count 4
+				+e.item-descr Сопровождаем клиента на всех этапах сделки
+			+e.item
+				+e.item-pic._5
+					+e.item-count 5
+				+e.item-descr Информируем клиента о результатах регистрацииперехода права и получения всех документов.
+			+e.line
+				+e.line-arr
+				+e.line-arr
+				+e.line-arr
+				+e.line-arr
+//end order
+

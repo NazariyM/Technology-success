@@ -1,0 +1,47 @@
+//begin dispute
+-
+	var disputeList = [
+	{
+	title: 'Признание права собственности по давности владения'
+	},
+	{
+	title: 'Признание права собственности отсутствующим'
+	},
+	{
+	title: 'Получение разрешения на строительство частного дома'
+	},
+	{
+	title: 'Истребование имущества из ужого незаконного владения'
+	}
+	,{
+	title: 'Самовольные постройки'
+	}
+	,{
+	title: 'Устранение препятствий в пользовании имуществом'
+	}
+	];
+mixin disputeItem(item)
+	+e.item
+		+e.item-title= item.title
+		+e.item-text
+			+e.P.item-descr Одним из способов приобретения права собственности является признание права собственности на имущество по давности владения.
+			+e.item-condition
+				+e.P
+					+e.STRONG Срок
+					=' '
+					+e.SPAN 2 месяца
+				+e.P
+					+e.STRONG Стоимость
+					=' '
+					+e.SPAN 22 000 рублей
+			+e.BUTTON.item-btn.btn Заказать
+
++b.SECTION.dispute
+	+b.section-icon
+		+e.pic._handshake
+	+e.container.container
+		+b.H2.title-md Споры о праве собственности:
+		+e.in
+			each item in disputeList
+				+disputeItem(item)
+//end dispute

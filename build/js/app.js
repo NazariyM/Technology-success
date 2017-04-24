@@ -3562,4 +3562,19 @@ $(function () {
 			nav.removeClass('is-active');
 		});
 	})();
+
+	// more text
+	(function () {
+		var $moreTextBtn = $('.js-more-text');
+
+		$moreTextBtn.on('click', function (e) {
+			var $this = $(this);
+			e.preventDefault();
+
+			$(this).toggleClass('is-active');
+			$(this).prev().fadeToggle();
+
+			$this.text() === 'Развернуть весь текст' ? $this.text('Свернуть текст') : $this.text('Развернуть весь текст');
+		});
+	})();
 });

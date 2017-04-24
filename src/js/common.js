@@ -175,4 +175,21 @@ $(function () {
 		});
 	})();
 
+	// more text
+	(function () {
+		let $moreTextBtn = $('.js-more-text');
+
+		$moreTextBtn.on('click', function (e) {
+			let $this = $(this);
+			e.preventDefault();
+
+			$(this).toggleClass('is-active');
+			$(this).prev().fadeToggle();
+
+			$this.text() === 'Развернуть весь текст' ? $this.text('Свернуть текст') : $this.text('Развернуть весь текст');
+
+		});
+
+	})();
+
 });

@@ -811,41 +811,195 @@
 		&_handshake::after
 			top: 54%
 			+s('handshake')
+		&_file::after
+			+s('file')
+		&_question::after
+			+s('question')
 			
-/* .dispute
+/* escort
 	----------------------------------- */
-.dispute
-	padding: 25px 0 40px
-	background: #FBF8F5
+.law-escort
+	padding: 25px 0 110px
+	+sm
+		padding: 25px 0 30px
 	&__in
-		display: flex
-		justify-content: space-between
-		flex-wrap: wrap
-		margin-top: 20px
-	&__item
-		overflow: hidden
-		padding: 30px 33px 25px
-		margin-bottom: 20px
-		width: percentage(338 / 1170)
-		border-radius: 10px
-		font-size: 14px
-		color: #000
-		background: #F3E9E0 url('../img/bg/dispute-itm_bg.png') no-repeat bottom right
-		text-align: center
-	&__item-title
-		font-size: 18px
-		+f('tnr-r')
-	&__item-descr
-		margin: 20px 0 30px
-	&__item-condition
-		padding: 0 43px
-		margin-bottom: 30px
-		text-align: left
-
-/* .escort
-	----------------------------------- */
-.escort
-	&__in
+		margin: 30px 0 70px
 		+clr
+		+sm
+			margin: 20px 0 0
 	&__pic
+		margin-left: 25px
+		margin-top: 6px
 		float: right
+		+sm
+			width: percentage(400 / 977)
+		+r(599)
+			width: 100%
+			float: none
+			margin: 0 auto
+	&__img
+		width: 100%
+		max-width: 380px
+		margin: 0 auto 15px
+	&__text
+		&:not(:last-child)
+			margin-top: 25px
+			+md
+				margin-top: 10px
+			
+		&_hidden
+			display: none
+	&__more-btn
+		float: right
+		padding: 0 1px
+		margin-top: 40px
+		margin-right: 70px
+		color: #68b1b3
+		box-shadow: 0 1px 0 $accent
+		+md
+			margin-top: 10px
+			margin-right: 15px
+		&.is-active
+			margin-top: 20px
+			+md
+				margin-top: 10px
+		&:hover
+			box-shadow: none
+	
+/* deal
+	----------------------------------- */
+.deal
+	position: relative
+	padding: 40px 0 55px
+	border-top: 1px solid rgba(95, 172, 174, 0.3)
+	border-bottom: 1px solid rgba(95, 172, 174, 0.3)
+	background: #f1e7de radial-gradient(ellipse farthest-corner at center 16%, rgba(255, 255, 255, 0.6) 25%, rgba(241, 231, 222, 1) 80%)
+	+clr
+	&__container
+		float: right
+		padding: 0 15px
+		font-size: 0
+		white-space: nowrap
+		text-align: right
+	&__in
+		display: inline-block
+		vertical-align: middle
+		max-width: 1600px
+		margin-right: 25px
+		white-space: normal
+	&__title
+		max-width: 600px
+	&__descr
+		margin-bottom: 50px
+		color: #303030
+		+f('ub-b',16,48)
+	&__advice
+		.advice__form-field
+			flex-basis: 31%
+		
+	&__picture
+		display: inline-block
+		vertical-align: middle
+		width: calc(100% - 709px)
+	&__img
+		width: 100%
+		height: 100%
+
+/* serv-escort
+	----------------------------------- */
+.serv-escort
+	padding: 25px 0 50px
+	background-color: rgba(#f2e8df, .3)
+	&__container
+		padding: 0 0 20px
+		+clr
+		font-size: 0
+	&__in
+		margin-top: 25px
+	&__item
+		width: 50%
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 50px
+		+clr
+		&:nth-child(odd)
+			padding-left: 100px
+		&:nth-child(even)
+			padding-left: 85px
+		&:nth-last-child(-n+2)
+			margin-bottom: 0
+	&__pic
+		position: relative
+		float: left
+		width: 65px
+		margin-top: 5px
+		&::after
+			display: block
+			content: ''
+		&_1::after
+			+s('student')
+		&_2::after
+			+s('law-book')
+		&_3::after
+			+s('courthouse')
+		&_4::after
+			+s('paragraph')
+		&_5::after
+			+s('agreement')
+		&_6::after
+			+s('key')
+	&__text
+		float: left
+		width: calc(100% - 65px)
+		font-size: 18px
+		color: #000000
+		line-height: 1.25
+		
+/* docs
+	----------------------------------- */
+.docs
+	padding: 20px 0 25px
+	&__in
+		max-width: 1000pxп
+		margin: 40px auto 0
+		+clr
+	&__item
+		float: left
+		width: 50%
+		&-title
+			+f('mrp-b',16)
+			color: #000
+	&__list
+		margin-top: 20px
+	&__list-text
+		margin-bottom: 20px
+		color: #000
+		+clr
+		&::before
+			float: left
+			content: ''
+			+s('check-sqr')
+		span
+			float: left
+			padding-left: 18px
+			width: calc(100% - 18px)
+			
+/* ask
+	----------------------------------- */
+.ask
+	position: relative
+	padding: 25px 0 65px
+	text-align: center
+	&::after
+		opacity: .33
+		background-color: #F9F5F4
+		background-image: repeating-linear-gradient(45deg, transparent 12px, transparent 28px, #D5DDCE 20px, #D5DDCE 30px, transparent 31px, transparent 49px, #D5DDCE 40px, #D5DDCE 51px, transparent 53px), repeating-linear-gradient(-45deg, transparent 9px, transparent 27px, #D5DDCD 20px, #D5DDCE 30px, transparent 30px, transparent 47px, #D5DDCE 40px, #D5DDCE 50px, transparent 51px)
+		+coverdiv
+		z-index: -1
+		content: ''
+	&__in
+		margin-bottom: 30px
+	&__phone
+		+f('ub-b',39)
+		color: #252525
+	
