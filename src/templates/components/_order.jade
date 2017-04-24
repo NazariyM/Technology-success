@@ -3,8 +3,8 @@ if orderClass ? orderClass : orderClass = []
 //begin order
 +b.SECTION.order(class= orderClass ? orderClass : '')
 	+e.container.container
-		+b.title-md.title-decor
-			+e.SPAN Порядок указания услуг
+		+b.title-md.title-decor.title-decor_lg
+			+e.SPAN Порядок оказания услуг
 		+e.in
 			+e.item
 				+e.item-pic._1
@@ -19,11 +19,15 @@ if orderClass ? orderClass : orderClass = []
 			+e.item
 				+e.item-pic._2
 					+e.item-count 2
-				+e.item-descr Осуществляем сбор необходимых документов
+				+e.item-descr Осуществляем сбор необходимых
+					br
+					| документов
 			+e.item
 				+e.item-pic._3
 					+e.item-count 3
-				+e.item-descr Составляем договор купли-продажи
+				+e.item-descr Составляем договор
+					br
+					| купли-продажи
 			+e.item
 				+e.item-pic._4
 					+e.item-count 4

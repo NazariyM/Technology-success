@@ -826,7 +826,9 @@
 		margin: 30px 0 70px
 		+clr
 		+sm
-			margin: 20px 0 0
+			margin: 20px 0
+		+xs
+			margin: 0
 	&__pic
 		margin-left: 25px
 		margin-top: 6px
@@ -870,48 +872,120 @@
 	----------------------------------- */
 .deal
 	position: relative
-	padding: 40px 0 55px
+	padding-bottom: 15px
 	border-top: 1px solid rgba(95, 172, 174, 0.3)
 	border-bottom: 1px solid rgba(95, 172, 174, 0.3)
 	background: #f1e7de radial-gradient(ellipse farthest-corner at center 16%, rgba(255, 255, 255, 0.6) 25%, rgba(241, 231, 222, 1) 80%)
-	+clr
+	+r(1599)
+		padding: 20px 0
+	+r(1365)
+		padding: 50px 0
+	+xs
+		padding: 25px 0
+	&__wrap
+		max-width: 1920px
+		margin: 0 auto
+		+clr
 	&__container
 		float: right
-		padding: 0 15px
+		padding: 0 0 0 15px
+		margin: -20px 0
+		max-width: 1566px
 		font-size: 0
 		white-space: nowrap
 		text-align: right
+		+xs
+			float: none
+			margin: 0
+			padding: 0 15px
 	&__in
 		display: inline-block
 		vertical-align: middle
-		max-width: 1600px
+		width: 44%
 		margin-right: 25px
 		white-space: normal
+		text-align: left
+		+r(1365)
+			width: 58%
+		+md
+			width: 54%
+			margin-right: 10px
+		+sm
+			width: 65%
+		+xs
+			width: 100%
+			margin: 0
 	&__title
 		max-width: 600px
+		line-height: 1.3
+		+lg
+			line-height: 1.2
+		+md
+			max-width: 500px
+			font-size: 26px
+		+xs
+			max-width: none
+			text-align: center
+		+r(599)
+			font-size: 20px
 	&__descr
-		margin-bottom: 50px
+		margin: 15px 0 50px
 		color: #303030
-		+f('ub-b',16,48)
+		+f('ub-b',16)
+		+r(1599)
+			margin-bottom: 20px
+		+sm
+			font-size: 14px
+		+xs
+			text-align: center
 	&__advice
 		.advice__form-field
 			flex-basis: 31%
+			+md
+				margin-bottom: 10px
+				margin-left: 0
+		.advice__form-inn
+			+md
+				align-items: stretch
+				flex-direction: column
+				max-width: 325px
+				margin: 0
+			+xs
+				margin: 0 auto
+				align-items: center
+		.advice__btn
+			width: 100%
 		
 	&__picture
 		display: inline-block
 		vertical-align: middle
-		width: calc(100% - 709px)
+		width: calc(100% - 725px)
+		margin: -20px 0
+		+md
+			width: 55%
+			margin-left: -95px
+		+sm
+			margin-top: 90px
+			margin-left: -155px
+		+xs
+			display: none
 	&__img
 		width: 100%
 		height: 100%
+	&__advice
+		justify-content: flex-start
 
 /* serv-escort
 	----------------------------------- */
 .serv-escort
-	padding: 25px 0 50px
+	padding: 25px 0 70px
 	background-color: rgba(#f2e8df, .3)
+	+lg
+		padding: 25px 0 50px
+	+xs
+		padding: 25px 0
 	&__container
-		padding: 0 0 20px
+		padding: 0 15px 30px
 		+clr
 		font-size: 0
 	&__in
@@ -921,18 +995,44 @@
 		display: inline-block
 		vertical-align: top
 		margin-bottom: 50px
-		+clr
+		font-size: 0
+		+sm
+			margin-bottom: 25px
+		+xs
+			width: 100%
 		&:nth-child(odd)
 			padding-left: 100px
+			+md
+				padding-left: 35px
+			+sm
+				padding-left: 5px
+			+xs
+				padding-left: 5px
 		&:nth-child(even)
 			padding-left: 85px
+			+md
+				padding-left: 45px
+			+sm
+				padding-left: 25px
+			+xs
+				padding-left: 5px
 		&:nth-last-child(-n+2)
 			margin-bottom: 0
+			+xs
+				margin-bottom: 25px
+		&:last-child
+			+xs
+				margin-bottom: 0
 	&__pic
 		position: relative
-		float: left
+		display: inline-block
+		vertical-align: top
 		width: 65px
 		margin-top: 5px
+		+sm
+			width: 55px
+		+xs
+			vertical-align: middle
 		&::after
 			display: block
 			content: ''
@@ -949,40 +1049,70 @@
 		&_6::after
 			+s('key')
 	&__text
-		float: left
+		display: inline-block
+		vertical-align: top
 		width: calc(100% - 65px)
 		font-size: 18px
 		color: #000000
 		line-height: 1.25
+		+lg
+			font-size: 16px
+		+md
+			font-size: 15px
+		+xs
+			vertical-align: middle
+			padding-left: 5px
+			font-size: 14px
 		
 /* docs
 	----------------------------------- */
 .docs
-	padding: 20px 0 25px
+	&__container
+		max-width: 1090px
 	&__in
-		max-width: 1000pxп
 		margin: 40px auto 0
 		+clr
 	&__item
 		float: left
 		width: 50%
-		&-title
-			+f('mrp-b',16)
-			color: #000
+		+xs
+			width: 100%
+			margin-bottom: 25px
+			&:last-child
+				margin-bottom: 0
+		&:nth-child(1)
+			padding-left: 6.5%
+			+sm
+				padding-left: 2%
+		&:nth-child(2)
+			padding-left: 11%
+			+sm
+				padding-left: 3%
+	&__item-title
+		+f('mrp-b',16)
+		color: #000
 	&__list
 		margin-top: 20px
+		line-height: 1.2
 	&__list-text
-		margin-bottom: 20px
 		color: #000
 		+clr
 		&::before
 			float: left
 			content: ''
 			+s('check-sqr')
+		&:not(:last-child)
+			margin-bottom: 20px
+			+xs
+				margin-bottom: 10px
 		span
 			float: left
 			padding-left: 18px
 			width: calc(100% - 18px)
+			+md
+				font-size: 15px
+			+xs
+				font-size: 14px
 			
 /* ask
 	----------------------------------- */
@@ -990,6 +1120,8 @@
 	position: relative
 	padding: 25px 0 65px
 	text-align: center
+	+xs
+		padding: 25px 0 35px
 	&::after
 		opacity: .33
 		background-color: #F9F5F4
@@ -998,8 +1130,19 @@
 		z-index: -1
 		content: ''
 	&__in
-		margin-bottom: 30px
+		margin: 20px 0 25px
 	&__phone
+		display: inline-block
+		margin-bottom: 10px
 		+f('ub-b',39)
 		color: #252525
+		+r(599)
+			margin-bottom: 5px
+			font-size: 28px
+	&__advice
+		.advice__form-inn
+			max-width: 1060px
+			margin: 0 auto
+			+sm
+				max-width: 380px
 	

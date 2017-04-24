@@ -44,7 +44,7 @@ block content
 					+e.BUTTON(type='button').more-btn.js-more-text Развернуть весь текст
 
 			+b.SECTION.benefits
-				+e.H2.title.title-md.title-decor
+				+e.H2.title.title-md.title-decor.title-decor_lg
 					+e.SPAN 5 причин работать с нами
 				+e.inn
 					+e.item
@@ -62,22 +62,25 @@ block content
 
 	//begin deal
 	+b.SECTION.deal
-		+e.container.container
-			+e.in
-				+e.title.title-lg СОБИРАЕТЕСЬ ПРОВЕСТИ СДЕЛКУ С НЕДВИЖИМОСТЬЮ, НО НЕ ЗНАЕТЕ, КАК ГРАМОТНО ОЦЕНИТЬ ВСЕ РИСКИ?
-				+e.descr ЗАПИШИТЕСЬ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ПРЯМО СЕЙЧАС
-				+b.advice.deal__advice
-					+e.FORM(action='#!').form
-						+e.form-inn
-							+e.form-field
-								+e.INPUT.input.input(type='text' placeholder='Имя*' name='')
-							+e.form-field
-								+e.INPUT.input.input(type='tel' placeholder='Телефон*' name='')
-							+e.form-field
-								+e.BUTTON(type='submit').btn.btn Получить консультацию
+		+e.wrap
+			+e.container.container
+				+e.in
+					+e.title.title-lg СОБИРАЕТЕСЬ ПРОВЕСТИ СДЕЛКУ
+						br
+						| С НЕДВИЖИМОСТЬЮ, НО НЕ ЗНАЕТЕ, КАК ГРАМОТНО ОЦЕНИТЬ ВСЕ РИСКИ?
+					+e.descr ЗАПИШИТЕСЬ НА БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ПРЯМО СЕЙЧАС
+					+b.advice.deal__advice
+						+e.FORM(action='#!').form
+							+e.form-inn
+								+e.form-field
+									+e.INPUT.input.input(type='text' placeholder='Имя*' name='')
+								+e.form-field
+									+e.INPUT.input.input(type='tel' placeholder='Телефон*' name='')
+								+e.form-field
+									+e.BUTTON(type='submit').btn.btn Получить консультацию
 
-			+e.picture
-				+e.IMG(src='img/bg/real-estate_bg.png').img
+				+e.picture
+					+e.IMG(src='img/bg/real-estate_bg.png').img
 	//end
 
 	//begin serv-escort
@@ -109,7 +112,7 @@ block content
 		//begin docs
 		+b.docs
 			+e.container.container
-				+b.title-md.title-decor
+				+b.title-md.title-decor.title-decor_lg
 					+e.SPAN Какие документы нужны
 				+e.in
 					+e.item
